@@ -4,7 +4,15 @@
 
 <%= link_to "My profile", root_path %>
 <%= link_to "New article", new_article_path %>
-  
+<br/><br/>
+
+<%= form_tag "/articles", method: "GET" do %>
+  <%= label_tag :search_article %>
+  <%= text_field_tag :search_article %>
+<br/>
+  <%= submit_tag "Search" %>
+<% end %>
+
 <div id="articles">
   <% @articles.each do |article| %>
     <%= render article %>

@@ -4,6 +4,13 @@ class ArticlesController < ApplicationController
   # GET /articles or /articles.json
   def index
     @articles = Article.all
+    if existing_author?(params[:search_article])
+      #if author dosn't exist order by title
+      @articles = search_article(params[:search_article]).order(title: :asc)
+    else
+      #else order by author
+      @articles = search_article(params[:search_article]).order(author: :asc, title: :asc)
+    end
   end
 
   # GET /articles/1 or /articles/1.json
@@ -58,6 +65,15 @@ class ArticlesController < ApplicationController
   end
 
   private
+
+    def existing_author?(param)
+      Article.where(author: param).empty?
+    end
+
+    def search_article(param)
+      Article.where('title LIKE :search OR body LIKE :search OR author LIKE :search', search: "%#{param}%")
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.find(params[:id])
