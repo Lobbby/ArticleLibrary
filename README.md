@@ -1,24 +1,22 @@
 # README
+====================== README ======================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To start project you need :
+	- Ruby version 3.0.3	
+	- Rails 7
+	- postgresql service running
 
-Things you may want to cover:
+Go to directory then run : 
+	- rails db:migrate
+	- rails s
 
-* Ruby version
+Root page need authentication.
+To start using the app create an account and sign in.
 
-* System dependencies
+When you log in you start on your account management page where you can change your credentials.
+You can access to the articles home page by clicking the link "View articles"
 
-* Configuration
+When you jump to articles home page, you can search, create, read, update or delete an article.
+Search function prioritize author if found then order them
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
