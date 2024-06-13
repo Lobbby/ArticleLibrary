@@ -1,12 +1,13 @@
-# README
-====================== README ======================
+# ====================== README ======================
 
 To start project you need :
-	- Ruby version 3.0.3	
+
+	- Ruby version 3.0.3
 	- Rails 7
 	- postgresql service running
 
 Go to directory then run : 
+
 	- rails db:migrate
 	- rails s
 
