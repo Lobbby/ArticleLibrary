@@ -9,6 +9,7 @@ To start project you need :
 Go to directory then run : 
 
 	- rails db:migrate
+	- rails dev:cache
 	- rails s
 
 Root page need authentication.
