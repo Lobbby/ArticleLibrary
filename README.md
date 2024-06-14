@@ -1,4 +1,4 @@
-# ====================== README ======================
+# =================== README ===================
 
 To start project you need :
 
@@ -22,7 +22,7 @@ When you jump to articles home page, you can search, create, read, update or del
 Search function prioritize author if found then order them
 
 
-# ====================== SOURCES ======================
+# =================== SOURCES ===================
 
 Crud
 https://guides.rubyonrails.org/v3.2/getting_started.html#getting-up-and-running-quickly-with-scaffolding
